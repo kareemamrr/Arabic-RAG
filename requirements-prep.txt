@@ -1,0 +1,9 @@
+surya-ocr
+camelot-py
+chromadb
+openai
+sentence-transformers
+langchain
+tiktoken
+opencv-python
+ghostscript
