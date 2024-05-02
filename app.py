@@ -7,6 +7,12 @@ from langchain.document_loaders import TextLoader
 from langchain_community.document_loaders import DirectoryLoader
 import streamlit as st
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
+
+
 st.title('Arabic RAG App')
 
 def init_rag():
