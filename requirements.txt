@@ -5,3 +5,4 @@ tiktoken
 chromadb
 openai
 streamlit
+langchain-openai

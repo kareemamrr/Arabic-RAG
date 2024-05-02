@@ -1,16 +1,17 @@
 from langchain.vectorstores import Chroma
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.llms import OpenAI
 from langchain.chains import VectorDBQA
 from langchain.document_loaders import TextLoader
+from langchain_community.document_loaders import DirectoryLoader
 import streamlit as st
 
 st.title('Arabic RAG App')
 
 def init_rag():
     with st.status('Getting things ready'):
-        loader = TextLoader('extracted_text.txt')
+        loader = DirectoryLoader('data/pdf1', glob="**/*.txt", loader_cls=TextLoader)
         documents = loader.load()
 
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=200, chunk_overlap=0)
