@@ -46,5 +46,6 @@ SEGMENT = False
 ```
 
 ### App
-To manually run the streamlit app, navigate to the root project directory and run `streamlit run app.py`
+- You can find the RAG deployed by clicking this [link](https://monta-rag.streamlit.app/).
+- To manually run the streamlit app, navigate to the root project directory and run `streamlit run app.py`
 > If you are met with an error 429 from the OpenAI API, please switch the the API key or contact me to switch it myself.
