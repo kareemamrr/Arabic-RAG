@@ -48,4 +48,7 @@ SEGMENT = False
 ### App
 - You can find the RAG deployed by clicking this [link](https://monta-rag.streamlit.app/).
 - To manually run the streamlit app, navigate to the root project directory and run `streamlit run app.py`
-> If you are met with an error 429 from the OpenAI API, please switch the the API key or contact me to switch it myself.
+> If you are met with an 429 error from the OpenAI API, please switch the the API key or contact me to switch it myself.
+> For rate limiting purposes, the app deployed has the text for only the "Press Release" PDF. If you wish to have it work on text from both PDFs:
+> - Navigate to the app.py file, and change line 20 from `loader = DirectoryLoader('data/pdf1', glob="**/*.txt", loader_cls=TextLoader)` to `loader = DirectoryLoader('data/', glob="**/*.txt", loader_cls=TextLoader)`
+> - Run the app locally with the command shown above.
