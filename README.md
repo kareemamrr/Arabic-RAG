@@ -52,3 +52,4 @@ SEGMENT = False
 > For rate limiting purposes, the app deployed has the text for only the "Press Release" PDF. If you wish to have it work on text from both PDFs:
 > - Navigate to the app.py file, and change line 20 from `loader = DirectoryLoader('data/pdf1', glob="**/*.txt", loader_cls=TextLoader)` to `loader = DirectoryLoader('data/', glob="**/*.txt", loader_cls=TextLoader)`
 > - Run the app locally with the command shown above.
+> - The link can show the app asleep due to it being inactive, in that case please reach out ASAP for me to respond.
