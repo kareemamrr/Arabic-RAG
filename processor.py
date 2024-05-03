@@ -1,3 +1,4 @@
+import config
 import os
 import re
 
@@ -32,12 +33,12 @@ from surya.settings import settings
 
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
-PDF_PATH = "data/pdf1/Press Release - 2022 Results (Stock Market).pdf"
-ORIGINAL_IMGS_PATH = "data/pdf1/original_images"
+PDF_PATH = config.PDF_PATH
+ORIGINAL_IMGS_PATH = config.ORIGINAL_IMGS_PATH
 CROPPED_IMGS_PATH = "data/pdf1/cropped_images"
-TEXT_FILE_PATH = "data/pdf1/pdf1.txt"
-START_PAGE = 1  # zero-based
-SEGMENT = True
+TEXT_FILE_PATH = config.TEXT_FILE_PATH
+START_PAGE = config.start_page
+SEGMENT = config.SEGMENT
 
 
 class BasePreprocesser:

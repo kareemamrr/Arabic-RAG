@@ -25,7 +25,7 @@ To run the data preparation module through the CLI, run:
 - For the "Budget Reports" PDF `python cli.py --pdf_path pdf2.pdf --originals_path pdf2/originals --cropped_path pdf2/cropped --text_file_path --originals_path pdf2/extracted_text.txt --start_page 2`
 
 #### via module
-The module can be ran directly without the CLI interface through `python processor.py`. Though the settings have to be changed manually in the script itself.
+The module can be ran directly without the CLI interface through `python processor.py`. Though the settings have to be changed manually in `config.py`
 - For "Press Release" PDF
 ```
 PDF_PATH = ...
